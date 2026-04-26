@@ -1,0 +1,16 @@
+symbol,pdb_count,alphafold_available,ligand_count,docking_readiness,recommended_docking_scope
+SNCA,165,True,100,credible_structure_and_ligands_available,dock curated ligand analogues against disease-relevant experimental structures with redocking controls
+GLP1R,56,True,100,credible_structure_and_ligands_available,dock curated ligand analogues against disease-relevant experimental structures with redocking controls
+LRRK2,0,True,100,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+GBA1,0,True,100,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+MAPK1,0,True,100,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+NOD2,0,True,100,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+IL17A,36,True,100,credible_structure_and_ligands_available,dock curated ligand analogues against disease-relevant experimental structures with redocking controls
+TLR2,7,True,15,credible_structure_and_ligands_available,dock curated ligand analogues against disease-relevant experimental structures with redocking controls
+NTRK1,0,True,100,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+SLC6A3,7,True,100,credible_structure_and_ligands_available,dock curated ligand analogues against disease-relevant experimental structures with redocking controls
+PINK1,3,True,3,credible_structure_and_ligands_available,dock curated ligand analogues against disease-relevant experimental structures with redocking controls
+LAMP2,0,True,2,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+MYD88,0,True,5,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+NDUFS3,0,True,2,alphafold_only_hypothesis_generating,avoid decision-grade docking; use only as exploratory model after pocket validation
+PRKN,0,True,0,alphafold_only_low_priority,avoid decision-grade docking; use only as exploratory model after pocket validation

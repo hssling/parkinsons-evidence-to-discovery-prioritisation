@@ -39,6 +39,10 @@ The dataset integrates:
 - GO biological-process enrichment;
 - exploratory ReactomePA enrichment;
 - drug-repurposing candidate rankings;
+- multi-omics expansion inventory and pathway-recurrence gap map;
+- genetic causal-triangulation and variant-to-pathway scoring matrices;
+- drug-discovery deepening outputs covering LINCS readiness, ChEMBL/ADMET/BBB triage, docking readiness and trial gaps;
+- experimental-validation work packages with assays, controls and go/no-go criteria;
 - publication figures, scripts, tables, manuscript files, reference audits, and reproducibility logs.
 
 The dataset is intended for research, education, validation, reproducibility, and hypothesis generation. It does not claim that a cure has been found.
@@ -61,13 +65,27 @@ data/
     GSE72267_Reactome_enrichment_top500_exploratory.csv
   drug_repurposing/
     drug_repurposing_candidates.csv
+  omics_expansion/
+    multi_omics_dataset_inventory.csv
+    multi_tissue_pathway_recurrence.csv
+    omics_modality_gap_map.csv
+  genetics/
+    genetic_causal_triangulation_matrix.csv
+    variant_to_pathway_scoring.csv
+  drug_discovery_deepening/
+    drug_discovery_deepening_matrix.csv
+    docking_readiness.csv
+    clinical_trial_gap_map.csv
 figures/
 scripts/
 manuscript/
 tables/
 reproducibility/
+validation_work_packages/
 references_audit.csv
 ```
+
+Extension analyses that require external summary statistics, licensed services, patent review or new dataset selection are labelled as readiness or gap-mapping outputs rather than completed evidence results.
 
 ## Current Key Findings
 

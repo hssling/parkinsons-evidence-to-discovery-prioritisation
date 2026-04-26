@@ -11,6 +11,10 @@ This Kaggle-ready package contains processed research assets from an AI-assisted
 - GSE72267 blood transcriptomic analysis outputs.
 - GO biological-process enrichment and exploratory Reactome pathway enrichment.
 - Drug-repurposing candidate rankings.
+- Multi-omics expansion inventory and pathway-recurrence gap map.
+- Genetic causal-triangulation and variant-to-pathway scoring matrices.
+- Drug-discovery deepening outputs covering LINCS readiness, ChEMBL/ADMET/BBB triage, docking readiness and trial gaps.
+- Experimental-validation work packages with assays, controls and go/no-go criteria.
 - Publication-ready figures in PNG/SVG.
 - Manuscript draft, tables, scripts, reference audit, and reproducibility logs.
 
@@ -24,6 +28,13 @@ This Kaggle-ready package contains processed research assets from an AI-assisted
 - `data/omics/GSE72267_GO_BP_enrichment_top500.csv`
 - `data/omics/GSE72267_Reactome_enrichment_top500_exploratory.csv`
 - `data/drug_repurposing/drug_repurposing_candidates.csv`
+- `data/omics_expansion/multi_omics_dataset_inventory.csv`
+- `data/omics_expansion/multi_tissue_pathway_recurrence.csv`
+- `data/genetics/genetic_causal_triangulation_matrix.csv`
+- `data/genetics/variant_to_pathway_scoring.csv`
+- `data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv`
+- `data/drug_discovery_deepening/docking_readiness.csv`
+- `validation_work_packages/experimental_validation_work_packages.csv`
 - `figures/graphical_abstract_pathway_to_intervention.png`
 - `manuscript/manuscript_full_publication_ready.docx`
 - `references_audit.csv`
@@ -33,6 +44,8 @@ This Kaggle-ready package contains processed research assets from an AI-assisted
 The highest-ranked prevention or disease-modification candidates were pesticide-exposure reduction, structured exercise, GLP-1 receptor pathway strategies, Mediterranean/MIND-style dietary pattern, LRRK2 inhibition, GBA/lysosomal modulation, head-injury prevention, and air-pollution reduction.
 
 GSE72267 limma analysis included 40 PD and 19 control blood samples. No probes met the prespecified FDR < 0.05 and absolute log2 fold-change >= 0.25 threshold. GO and Reactome outputs are therefore best interpreted as hypothesis-generating pathway exploration, not definitive molecular validation.
+
+The extension release adds readiness/gap outputs for proteomics, metabolomics, methylation, single-cell analysis, GWAS colocalisation, Mendelian randomisation, eQTL/pQTL mapping, LINCS/Connectivity Map scoring, patent review and docking. Items not yet executed are explicitly labelled as such.
 
 ## Repository and CI
 
