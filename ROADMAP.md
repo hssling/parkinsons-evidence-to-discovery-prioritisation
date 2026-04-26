@@ -28,6 +28,8 @@ Deliverables:
 
 Goal: Strengthen biological recurrence beyond a single blood transcriptomic dataset.
 
+Status: baseline extension outputs generated. Current completed recurrence covers GSE72267 blood and two substantia nigra transcriptomic datasets from the benchmark workspace; proteomics, metabolomics, methylation and single-cell layers are mapped as ready-for-import rather than completed analyses.
+
 Planned work:
 
 - Add multi-dataset transcriptomic meta-analysis across blood and brain datasets.
@@ -38,14 +40,17 @@ Planned work:
 
 Deliverables:
 
-- `data/omics_recurrence/`
-- `data/multiomics/`
+- `data/omics_expansion/multi_omics_dataset_inventory.csv`
+- `data/omics_expansion/multi_tissue_pathway_recurrence.csv`
+- `data/omics_expansion/omics_modality_gap_map.csv`
 - `figures/multiomics_recurrence_summary.png`
 - `reproducibility/multiomics_methods_log.md`
 
 ## Phase 3. Genetic Causal Triangulation
 
 Goal: Add causal and genetic support layers for prioritised intervention points and targets.
+
+Status: baseline triangulation matrix generated. GWAS support classes, Open Targets identifiers and variant-to-pathway scores are available; colocalisation, Mendelian randomisation and eQTL/pQTL analyses are marked ready-not-executed pending summary-statistic acquisition.
 
 Planned work:
 
@@ -57,7 +62,8 @@ Planned work:
 
 Deliverables:
 
-- `data/genetics/`
+- `data/genetics/genetic_causal_triangulation_matrix.csv`
+- `data/genetics/variant_to_pathway_scoring.csv`
 - `scripts/13_genetic_causal_triangulation.py`
 - `tables/genetic_causal_support_matrix.xlsx`
 - `figures/genetic_causal_evidence_map.png`
@@ -65,6 +71,8 @@ Deliverables:
 ## Phase 4. Drug-discovery Deepening
 
 Goal: Improve drug-repurposing and target-tractability evaluation beyond first-pass candidate ranking.
+
+Status: baseline deepening matrices generated. ChEMBL compound triage, BBB/CNS heuristics, ADMET flags, docking readiness and clinical-trial gaps are mapped; LINCS/Connectivity Map and patent landscape review remain ready-not-executed.
 
 Planned work:
 
@@ -77,7 +85,9 @@ Planned work:
 
 Deliverables:
 
-- `data/drug_discovery_deepening/`
+- `data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv`
+- `data/drug_discovery_deepening/docking_readiness.csv`
+- `data/drug_discovery_deepening/clinical_trial_gap_map.csv`
 - `scripts/14_drug_discovery_deepening.py`
 - `tables/repurposing_candidate_triage_deep.xlsx`
 - `figures/drug_repurposing_evidence_stack.png`
@@ -85,6 +95,8 @@ Deliverables:
 ## Phase 5. Experimental-validation Roadmap
 
 Goal: Convert prioritised pathways into actionable wet-lab validation work packages.
+
+Status: baseline work packages generated for prioritised targets, including iPSC dopaminergic-neuron, microglia/inflammatory, co-culture and mitochondrial/lysosomal assay modules with controls, endpoints and go/no-go criteria.
 
 Planned work:
 
@@ -96,7 +108,8 @@ Planned work:
 
 Deliverables:
 
-- `validation_work_packages/`
+- `validation_work_packages/experimental_validation_work_packages.csv`
+- `validation_work_packages/experimental_validation_work_packages.md`
 - `tables/experimental_validation_work_packages.xlsx`
 - `figures/validation_model_to_target_map.png`
 

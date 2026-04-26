@@ -28,12 +28,23 @@ REQUIRED_FILES = [
     "data/omics/GSE72267_GO_BP_enrichment_top500.csv",
     "data/omics/GSE72267_Reactome_enrichment_top500_exploratory.csv",
     "data/drug_repurposing/drug_repurposing_candidates.csv",
+    "data/omics_expansion/multi_omics_dataset_inventory.csv",
+    "data/omics_expansion/multi_tissue_pathway_recurrence.csv",
+    "data/omics_expansion/omics_modality_gap_map.csv",
+    "data/genetics/genetic_causal_triangulation_matrix.csv",
+    "data/genetics/variant_to_pathway_scoring.csv",
+    "data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv",
+    "data/drug_discovery_deepening/docking_readiness.csv",
+    "data/drug_discovery_deepening/clinical_trial_gap_map.csv",
+    "validation_work_packages/experimental_validation_work_packages.csv",
+    "validation_work_packages/experimental_validation_work_packages.md",
     "figures/fig1_prisma_flow.png",
     "figures/fig2_pathogenesis_evidence_network.png",
     "figures/fig4_omics_DEG_volcano.png",
     "manuscript/manuscript_full.md",
     "submission_package/nmji_original_article_submission/02_main_manuscript_NMJI_original_article.md",
     "reproducibility/claim_audit.csv",
+    "reproducibility/extension_modules_methods_log.md",
     "reproducibility/final_quality_check.csv",
 ]
 
@@ -113,11 +124,41 @@ def check_nmji_reference_order() -> None:
         fail("corrected reference 11 title not found")
 
 
+def check_extension_outputs() -> None:
+    omics_inventory = list(csv.DictReader((ROOT / "data/omics_expansion/multi_omics_dataset_inventory.csv").open(newline="", encoding="utf-8")))
+    if len(omics_inventory) < 8:
+        fail("multi-omics inventory is too small")
+    layers = {row["omics_layer"] for row in omics_inventory}
+    for expected in ["bulk transcriptomics", "proteomics", "metabolomics", "DNA methylation", "single-cell transcriptomics"]:
+        if expected not in layers:
+            fail(f"expected omics layer missing: {expected}")
+
+    genetics = list(csv.DictReader((ROOT / "data/genetics/genetic_causal_triangulation_matrix.csv").open(newline="", encoding="utf-8")))
+    if not any(row["symbol"] == "LRRK2" and row["gwas_target_support"] == "high" for row in genetics):
+        fail("LRRK2 high genetic support row missing")
+    if not any(row["colocalisation_status"] == "ready_not_executed" for row in genetics):
+        fail("genetic readiness guardrail missing")
+
+    drug = list(csv.DictReader((ROOT / "data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv").open(newline="", encoding="utf-8")))
+    if not any(row["lincs_connectivity_map_status"] == "ready_not_executed" for row in drug):
+        fail("LINCS readiness guardrail missing")
+    if not any("not a treatment recommendation" in row["interpretation"] for row in drug):
+        fail("drug-discovery clinical guardrail missing")
+
+    validation = list(csv.DictReader((ROOT / "validation_work_packages/experimental_validation_work_packages.csv").open(newline="", encoding="utf-8")))
+    if len(validation) < 8:
+        fail("experimental validation work-package table is too small")
+    required_columns = {"primary_assays", "positive_controls", "negative_controls", "go_criteria", "no_go_criteria"}
+    if not required_columns.issubset(validation[0].keys()):
+        fail("experimental validation table is missing required assay/control/go-no-go columns")
+
+
 def main() -> None:
     check_required_files()
     check_candidate_table()
     check_claim_language()
     check_nmji_reference_order()
+    check_extension_outputs()
     print("Repository validation passed.")
 
 

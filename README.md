@@ -4,6 +4,8 @@ This repository contains reproducible research assets from an AI-assisted eviden
 
 The project integrates evidence mapping, ClinicalTrials.gov mining, public transcriptomics, GO/Reactome pathway enrichment, pathway-to-intervention mapping, drug-repurposing triage, manuscript assets, figures, and reproducibility audits.
 
+The current extension release also adds structured phase 2-5 discovery assets for multi-omics expansion, genetic causal triangulation, drug-discovery deepening and experimental-validation work packages. Analyses not yet executed because they require external summary statistics, licensed services or new dataset selection are explicitly labelled as readiness or gap-mapping outputs.
+
 ## Scope
 
 This repository is for research, education, validation, and hypothesis generation. It is not a diagnostic tool, clinical decision-support system, treatment recommendation system, or proof that any intervention prevents or cures Parkinson's disease.
@@ -19,6 +21,10 @@ This repository is for research, education, validation, and hypothesis generatio
 - Drug-repurposing candidate ranking
 - Publication figures and manuscript files
 - NMJI original-article submission package
+- Multi-omics expansion inventory and pathway-recurrence gap map
+- Genetic causal-triangulation and variant-to-pathway matrices
+- Drug-discovery deepening outputs covering LINCS readiness, ChEMBL/ADMET/BBB triage, docking readiness and trial gaps
+- Experimental-validation work packages for iPSC dopaminergic neuron, microglia, organoid-compatible and co-culture follow-up
 - Reproducibility logs and claim-audit files
 
 ## Repository Layout
@@ -27,7 +33,11 @@ This repository is for research, education, validation, and hypothesis generatio
 data/
   clinical_trials/      ClinicalTrials.gov mining outputs
   drug_repurposing/     Candidate drug-repurposing tables
+  drug_discovery_deepening/
+                         LINCS readiness, docking, ADMET/BBB and trial-gap maps
+  genetics/              Genetic triangulation and variant-to-pathway scoring tables
   omics/                GSE72267 differential-expression and enrichment outputs
+  omics_expansion/       Multi-omics dataset inventory and pathway recurrence outputs
   processed/            Evidence maps, intervention rankings and prevention tables
 figures/                Publication figures
 manuscript/             Manuscript source files and generated documents
@@ -35,8 +45,31 @@ reproducibility/        Quality checks, audit trail and methods logs
 scripts/                Evidence, omics, figure and manuscript generation scripts
 submission_package/     Journal-specific submission assets
 tables/                 Spreadsheet exports
+validation_work_packages/
+                         Wet-lab validation work-package table and narrative plan
 references_audit.csv    Source-backed reference audit
 ```
+
+## Extension Outputs
+
+Phase 2-5 outputs can be regenerated with:
+
+```bash
+python scripts/13_run_extension_modules.py
+```
+
+The generated files include:
+
+- `data/omics_expansion/multi_omics_dataset_inventory.csv`
+- `data/omics_expansion/multi_tissue_pathway_recurrence.csv`
+- `data/genetics/genetic_causal_triangulation_matrix.csv`
+- `data/genetics/variant_to_pathway_scoring.csv`
+- `data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv`
+- `data/drug_discovery_deepening/docking_readiness.csv`
+- `data/drug_discovery_deepening/clinical_trial_gap_map.csv`
+- `validation_work_packages/experimental_validation_work_packages.csv`
+- `validation_work_packages/experimental_validation_work_packages.md`
+- `reproducibility/extension_modules_methods_log.md`
 
 ## Current Evidence Summary
 
