@@ -15,4 +15,7 @@ Thumbs.db
 # Large regenerated archives
 *.zip
 
+# Journal submission-system generated files
+submission_package/**/NMJI_*.pdf
+
 # Keep source assets, tables, figures and submission documents tracked.
