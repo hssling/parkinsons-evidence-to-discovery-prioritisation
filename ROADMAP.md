@@ -28,7 +28,7 @@ Deliverables:
 
 Goal: Strengthen biological recurrence beyond a single blood transcriptomic dataset.
 
-Status: baseline extension outputs generated. Current completed recurrence covers GSE72267 blood and two substantia nigra transcriptomic datasets from the benchmark workspace; proteomics, metabolomics, methylation and single-cell layers are mapped as ready-for-import rather than completed analyses.
+Status: baseline extension outputs generated and public dataset-discovery queries executed. Current completed recurrence covers GSE72267 blood and two substantia nigra transcriptomic datasets from the benchmark workspace. NCBI GEO/GDS searches now identify candidate brain, blood, proteomics, metabolomics, methylation and single-cell datasets for import; the non-transcriptomic datasets still require curation and analysis before they can be treated as recurrence evidence.
 
 Planned work:
 
@@ -43,6 +43,7 @@ Deliverables:
 - `data/omics_expansion/multi_omics_dataset_inventory.csv`
 - `data/omics_expansion/multi_tissue_pathway_recurrence.csv`
 - `data/omics_expansion/omics_modality_gap_map.csv`
+- `data/omics_expansion/public_multiomics_dataset_discovery.csv`
 - `figures/multiomics_recurrence_summary.png`
 - `reproducibility/multiomics_methods_log.md`
 
@@ -50,7 +51,7 @@ Deliverables:
 
 Goal: Add causal and genetic support layers for prioritised intervention points and targets.
 
-Status: baseline triangulation matrix generated. GWAS support classes, Open Targets identifiers and variant-to-pathway scores are available; colocalisation, Mendelian randomisation and eQTL/pQTL analyses are marked ready-not-executed pending summary-statistic acquisition.
+Status: baseline triangulation matrix generated and public Open Targets/GWAS Catalog queries executed. Target-PD association scores and GWAS Catalog mapped-gene overlaps are available; formal colocalisation, Mendelian randomisation and eQTL/pQTL analyses remain blocked pending full summary-statistic and instrument acquisition.
 
 Planned work:
 
@@ -64,6 +65,9 @@ Deliverables:
 
 - `data/genetics/genetic_causal_triangulation_matrix.csv`
 - `data/genetics/variant_to_pathway_scoring.csv`
+- `data/genetics/opentargets_pd_association_scores.csv`
+- `data/genetics/gwas_catalog_pd_gene_summary.csv`
+- `data/genetics/gwas_catalog_pd_target_overlap.csv`
 - `scripts/13_genetic_causal_triangulation.py`
 - `tables/genetic_causal_support_matrix.xlsx`
 - `figures/genetic_causal_evidence_map.png`
@@ -72,7 +76,7 @@ Deliverables:
 
 Goal: Improve drug-repurposing and target-tractability evaluation beyond first-pass candidate ranking.
 
-Status: baseline deepening matrices generated. ChEMBL compound triage, BBB/CNS heuristics, ADMET flags, docking readiness and clinical-trial gaps are mapped; LINCS/Connectivity Map and patent landscape review remain ready-not-executed.
+Status: baseline deepening matrices generated and public ChEMBL/ClinicalTrials.gov queries executed. ChEMBL selectivity counts and public trial-gap query counts are available; LINCS/Connectivity Map and patent landscape review remain blocked by credentialed service access or specialist review needs.
 
 Planned work:
 
@@ -88,6 +92,8 @@ Deliverables:
 - `data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv`
 - `data/drug_discovery_deepening/docking_readiness.csv`
 - `data/drug_discovery_deepening/clinical_trial_gap_map.csv`
+- `data/drug_discovery_deepening/chembl_compound_selectivity_summary.csv`
+- `data/drug_discovery_deepening/clinicaltrials_public_api_gap_query.csv`
 - `scripts/14_drug_discovery_deepening.py`
 - `tables/repurposing_candidate_triage_deep.xlsx`
 - `figures/drug_repurposing_evidence_stack.png`

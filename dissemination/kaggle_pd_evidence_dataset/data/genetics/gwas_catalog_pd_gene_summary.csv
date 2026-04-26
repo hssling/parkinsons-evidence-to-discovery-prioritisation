@@ -1,0 +1,16 @@
+symbol,gwas_catalog_mapped_association_count,best_gwas_catalog_p_value,best_gwas_catalog_effect,gwas_catalog_status
+SNCA,8,4e-170,-,executed_public_api
+GLP1R,0,,,executed_public_api
+LRRK2,7,1e-34,-,executed_public_api
+GBA1,3,2.9999999999999998e-90,4.113 unit decrease,executed_public_api
+MAPK1,0,,,executed_public_api
+NOD2,1,1e-09,-,executed_public_api
+IL17A,0,,,executed_public_api
+TLR2,0,,,executed_public_api
+NTRK1,1,3e-06,0.896 unit decrease,executed_public_api
+SLC6A3,0,,,executed_public_api
+PINK1,0,,,executed_public_api
+LAMP2,0,,,executed_public_api
+MYD88,0,,,executed_public_api
+NDUFS3,0,,,executed_public_api
+PRKN,0,,,executed_public_api

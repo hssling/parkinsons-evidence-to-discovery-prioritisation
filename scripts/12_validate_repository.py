@@ -31,11 +31,17 @@ REQUIRED_FILES = [
     "data/omics_expansion/multi_omics_dataset_inventory.csv",
     "data/omics_expansion/multi_tissue_pathway_recurrence.csv",
     "data/omics_expansion/omics_modality_gap_map.csv",
+    "data/omics_expansion/public_multiomics_dataset_discovery.csv",
     "data/genetics/genetic_causal_triangulation_matrix.csv",
     "data/genetics/variant_to_pathway_scoring.csv",
+    "data/genetics/opentargets_pd_association_scores.csv",
+    "data/genetics/gwas_catalog_pd_gene_summary.csv",
+    "data/genetics/gwas_catalog_pd_target_overlap.csv",
     "data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv",
     "data/drug_discovery_deepening/docking_readiness.csv",
     "data/drug_discovery_deepening/clinical_trial_gap_map.csv",
+    "data/drug_discovery_deepening/chembl_compound_selectivity_summary.csv",
+    "data/drug_discovery_deepening/clinicaltrials_public_api_gap_query.csv",
     "validation_work_packages/experimental_validation_work_packages.csv",
     "validation_work_packages/experimental_validation_work_packages.md",
     "figures/fig1_prisma_flow.png",
@@ -45,6 +51,7 @@ REQUIRED_FILES = [
     "submission_package/nmji_original_article_submission/02_main_manuscript_NMJI_original_article.md",
     "reproducibility/claim_audit.csv",
     "reproducibility/extension_modules_methods_log.md",
+    "reproducibility/public_external_execution_log.md",
     "reproducibility/final_quality_check.csv",
 ]
 
@@ -136,14 +143,34 @@ def check_extension_outputs() -> None:
     genetics = list(csv.DictReader((ROOT / "data/genetics/genetic_causal_triangulation_matrix.csv").open(newline="", encoding="utf-8")))
     if not any(row["symbol"] == "LRRK2" and row["gwas_target_support"] == "high" for row in genetics):
         fail("LRRK2 high genetic support row missing")
-    if not any(row["colocalisation_status"] == "ready_not_executed" for row in genetics):
-        fail("genetic readiness guardrail missing")
+    if not any(row["colocalisation_status"].startswith("blocked_requires") for row in genetics):
+        fail("genetic blocked-summary-statistics guardrail missing")
+    if not any(float(row.get("opentargets_pd_overall_score") or 0) > 0.7 for row in genetics):
+        fail("Open Targets public API scores missing from genetics matrix")
 
     drug = list(csv.DictReader((ROOT / "data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv").open(newline="", encoding="utf-8")))
-    if not any(row["lincs_connectivity_map_status"] == "ready_not_executed" for row in drug):
-        fail("LINCS readiness guardrail missing")
+    if not any(row["lincs_connectivity_map_status"].startswith("blocked_requires_lincs") for row in drug):
+        fail("LINCS blocked-credential guardrail missing")
+    if not any(row["chembl_selectivity_status"] == "executed_public_api" for row in drug):
+        fail("ChEMBL selectivity public API execution missing")
+    if not any(row.get("clinicaltrials_public_api_status") == "ok" for row in drug):
+        fail("ClinicalTrials.gov public API execution missing")
     if not any("not a treatment recommendation" in row["interpretation"] for row in drug):
         fail("drug-discovery clinical guardrail missing")
+
+    open_targets = list(csv.DictReader((ROOT / "data/genetics/opentargets_pd_association_scores.csv").open(newline="", encoding="utf-8")))
+    if not any(row["symbol"] == "LRRK2" and float(row.get("overall_association_score") or 0) > 0.7 for row in open_targets):
+        fail("LRRK2 Open Targets PD association score missing or too low")
+
+    gwas = list(csv.DictReader((ROOT / "data/genetics/gwas_catalog_pd_gene_summary.csv").open(newline="", encoding="utf-8")))
+    if not any(row["symbol"] == "SNCA" and int(row.get("gwas_catalog_mapped_association_count") or 0) > 0 for row in gwas):
+        fail("SNCA GWAS Catalog mapped association count missing")
+
+    geo = list(csv.DictReader((ROOT / "data/omics_expansion/public_multiomics_dataset_discovery.csv").open(newline="", encoding="utf-8")))
+    geo_layers = {row["omics_layer"] for row in geo}
+    for expected in ["proteomics", "metabolomics", "DNA methylation", "single-cell transcriptomics"]:
+        if expected not in geo_layers:
+            fail(f"public multi-omics discovery layer missing: {expected}")
 
     validation = list(csv.DictReader((ROOT / "validation_work_packages/experimental_validation_work_packages.csv").open(newline="", encoding="utf-8")))
     if len(validation) < 8:

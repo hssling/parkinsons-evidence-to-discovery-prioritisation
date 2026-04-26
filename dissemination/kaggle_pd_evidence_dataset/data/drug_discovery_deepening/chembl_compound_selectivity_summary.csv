@@ -1,0 +1,12 @@
+molecule_chembl_id,molecule_name,query_status,human_target_count_any_activity,human_target_count_potent_100nM,activity_record_count,top_target_names,selectivity_interpretation
+CHEMBL3593932,CHEMBL3593932,ok,3,2,6,Alpha-synuclein; Amyloid-beta precursor protein; Microtubule-associated protein tau,moderate_polypharmacology
+CHEMBL398714,CHEMBL398714,ok,1,1,16,Glucagon-like peptide 1 receptor,relatively_selective_by_public_activity_count
+CHEMBL535,SUNITINIB,ok,546,51,1000,Tyrosine-protein kinase ABL1; Vascular endothelial growth factor receptor 2; Epidermal growth factor receptor; Mast/stem cell growth factor receptor Kit; HeLa; Platelet-derived growth factor receptor beta; Receptor-type tyrosine-protein kinase FLT3; Death-associated protein kinase 3,broad_polypharmacology_or_tool_compound
+CHEMBL3349996,CHEMBL3349996,ok,1,1,1,Lysosomal acid glucosylceramidase,relatively_selective_by_public_activity_count
+CHEMBL388978,STAUROSPORINE,ok,355,229,1000,Vascular endothelial growth factor receptor 2; Epidermal growth factor receptor; Tyrosine-protein kinase ABL1; Proto-oncogene tyrosine-protein kinase Src; Glycogen synthase kinase-3 beta; Mast/stem cell growth factor receptor Kit; Serine/threonine-protein kinase pim-1; Protein kinase C beta type,broad_polypharmacology_or_tool_compound
+CHEMBL4872143,CHEMBL4872143,ok,1,1,1,Interleukin-17A,relatively_selective_by_public_activity_count
+CHEMBL5195703,CHEMBL5195703,ok,1,1,13,TLR2/TLR6,relatively_selective_by_public_activity_count
+CHEMBL72,DESIPRAMINE,ok,155,4,907,Sodium-dependent noradrenaline transporter; Homo sapiens; Sodium-dependent dopamine transporter; Voltage-gated inwardly rectifying potassium channel KCNH2; Sodium-dependent serotonin transporter; Cytochrome P450 3A4; Cytochrome P450 2D6; 5-hydroxytryptamine receptor 2A,moderate_polypharmacology
+CHEMBL4088216,TP-030-1,ok,374,2,505,Colon cancer organoid; U2OS; Fibroblast; Receptor-interacting serine/threonine-protein kinase 1; HEK-293T; HT-29; Alpha-1A adrenergic receptor; Alpha-1B adrenergic receptor,moderate_polypharmacology
+CHEMBL3752910,CHEMBL3752910,ok,5,0,1000,HEK-293T; Fibroblast; U2OS; Histone deacetylase 6; Vascular endothelial growth factor receptor 2,relatively_selective_by_public_activity_count
+CHEMBL5653589,CHEMBL5653589,ok,475,167,1000,Ephrin type-A receptor 2; Ephrin type-A receptor 1; Ephrin type-B receptor 2; Ephrin type-B receptor 4; Ephrin type-B receptor 6; Ephrin type-A receptor 4; Ephrin type-A receptor 5; Ephrin type-A receptor 7,broad_polypharmacology_or_tool_compound

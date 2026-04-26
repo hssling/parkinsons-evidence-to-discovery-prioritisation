@@ -4,7 +4,7 @@ This repository contains reproducible research assets from an AI-assisted eviden
 
 The project integrates evidence mapping, ClinicalTrials.gov mining, public transcriptomics, GO/Reactome pathway enrichment, pathway-to-intervention mapping, drug-repurposing triage, manuscript assets, figures, and reproducibility audits.
 
-The current extension release also adds structured phase 2-5 discovery assets for multi-omics expansion, genetic causal triangulation, drug-discovery deepening and experimental-validation work packages. Analyses not yet executed because they require external summary statistics, licensed services or new dataset selection are explicitly labelled as readiness or gap-mapping outputs.
+The current extension release also adds structured phase 2-5 discovery assets for multi-omics expansion, genetic causal triangulation, drug-discovery deepening and experimental-validation work packages. Public API modules have been executed for Open Targets, GWAS Catalog, ChEMBL, ClinicalTrials.gov and NCBI GEO/GDS discovery. Analyses still blocked because they require external summary statistics, restricted credentials or specialist review are explicitly labelled as blocked rather than completed evidence.
 
 ## Scope
 
@@ -22,8 +22,8 @@ This repository is for research, education, validation, and hypothesis generatio
 - Publication figures and manuscript files
 - NMJI original-article submission package
 - Multi-omics expansion inventory and pathway-recurrence gap map
-- Genetic causal-triangulation and variant-to-pathway matrices
-- Drug-discovery deepening outputs covering LINCS readiness, ChEMBL/ADMET/BBB triage, docking readiness and trial gaps
+- Genetic causal-triangulation and variant-to-pathway matrices with Open Targets and GWAS Catalog public API evidence
+- Drug-discovery deepening outputs covering LINCS access status, ChEMBL selectivity, ADMET/BBB triage, docking readiness and ClinicalTrials.gov trial gaps
 - Experimental-validation work packages for iPSC dopaminergic neuron, microglia, organoid-compatible and co-culture follow-up
 - Reproducibility logs and claim-audit files
 
@@ -56,6 +56,7 @@ Phase 2-5 outputs can be regenerated with:
 
 ```bash
 python scripts/13_run_extension_modules.py
+python scripts/14_execute_public_external_analyses.py
 ```
 
 The generated files include:
@@ -64,12 +65,19 @@ The generated files include:
 - `data/omics_expansion/multi_tissue_pathway_recurrence.csv`
 - `data/genetics/genetic_causal_triangulation_matrix.csv`
 - `data/genetics/variant_to_pathway_scoring.csv`
+- `data/genetics/opentargets_pd_association_scores.csv`
+- `data/genetics/gwas_catalog_pd_gene_summary.csv`
+- `data/genetics/gwas_catalog_pd_target_overlap.csv`
 - `data/drug_discovery_deepening/drug_discovery_deepening_matrix.csv`
 - `data/drug_discovery_deepening/docking_readiness.csv`
 - `data/drug_discovery_deepening/clinical_trial_gap_map.csv`
+- `data/drug_discovery_deepening/chembl_compound_selectivity_summary.csv`
+- `data/drug_discovery_deepening/clinicaltrials_public_api_gap_query.csv`
+- `data/omics_expansion/public_multiomics_dataset_discovery.csv`
 - `validation_work_packages/experimental_validation_work_packages.csv`
 - `validation_work_packages/experimental_validation_work_packages.md`
 - `reproducibility/extension_modules_methods_log.md`
+- `reproducibility/public_external_execution_log.md`
 
 ## Current Evidence Summary
 

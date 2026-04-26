@@ -40,8 +40,9 @@ The dataset integrates:
 - exploratory ReactomePA enrichment;
 - drug-repurposing candidate rankings;
 - multi-omics expansion inventory and pathway-recurrence gap map;
-- genetic causal-triangulation and variant-to-pathway scoring matrices;
-- drug-discovery deepening outputs covering LINCS readiness, ChEMBL/ADMET/BBB triage, docking readiness and trial gaps;
+- public NCBI GEO/GDS discovery results for candidate brain, blood, proteomics, metabolomics, methylation and single-cell datasets;
+- genetic causal-triangulation and variant-to-pathway scoring matrices with Open Targets and GWAS Catalog API outputs;
+- drug-discovery deepening outputs covering LINCS access status, ChEMBL selectivity, ADMET/BBB triage, docking readiness and ClinicalTrials.gov trial gaps;
 - experimental-validation work packages with assays, controls and go/no-go criteria;
 - publication figures, scripts, tables, manuscript files, reference audits, and reproducibility logs.
 
@@ -69,13 +70,19 @@ data/
     multi_omics_dataset_inventory.csv
     multi_tissue_pathway_recurrence.csv
     omics_modality_gap_map.csv
+    public_multiomics_dataset_discovery.csv
   genetics/
     genetic_causal_triangulation_matrix.csv
     variant_to_pathway_scoring.csv
+    opentargets_pd_association_scores.csv
+    gwas_catalog_pd_gene_summary.csv
+    gwas_catalog_pd_target_overlap.csv
   drug_discovery_deepening/
     drug_discovery_deepening_matrix.csv
     docking_readiness.csv
     clinical_trial_gap_map.csv
+    chembl_compound_selectivity_summary.csv
+    clinicaltrials_public_api_gap_query.csv
 figures/
 scripts/
 manuscript/
@@ -85,7 +92,7 @@ validation_work_packages/
 references_audit.csv
 ```
 
-Extension analyses that require external summary statistics, licensed services, patent review or new dataset selection are labelled as readiness or gap-mapping outputs rather than completed evidence results.
+Public API modules have been executed where possible. Formal colocalisation, Mendelian randomisation, LINCS/Connectivity Map signature reversal, patent/freedom-to-operate review and decision-grade docking remain labelled as blocked where required inputs, credentials or specialist workflows are not available.
 
 ## Current Key Findings
 
