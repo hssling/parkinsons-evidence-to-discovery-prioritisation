@@ -10,6 +10,7 @@ __pycache__/
 Thumbs.db
 *.tmp
 *.log
+~$*.docx
 
 # Large regenerated archives
 *.zip
