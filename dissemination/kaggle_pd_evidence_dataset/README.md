@@ -34,6 +34,14 @@ The highest-ranked prevention or disease-modification candidates were pesticide-
 
 GSE72267 limma analysis included 40 PD and 19 control blood samples. No probes met the prespecified FDR < 0.05 and absolute log2 fold-change >= 0.25 threshold. GO and Reactome outputs are therefore best interpreted as hypothesis-generating pathway exploration, not definitive molecular validation.
 
+## Repository and CI
+
+The GitHub repository with version-controlled evidence assets, scripts, manuscript files, reproducibility checks, and CI validation is available at:
+
+https://github.com/hssling/parkinsons-evidence-to-discovery-prioritisation
+
+The repository CI runs a lightweight validation script that checks required release assets, intervention-ranking integrity, cautionary clinical-claim language, and NMJI reference ordering.
+
 ## Intended Use
 
 This dataset is intended for:
@@ -59,4 +67,3 @@ This dataset is intended for:
 ## License
 
 Released under CC BY 4.0 for the generated processed data, figures, documentation, and code authored in this project. Users must also respect the terms of upstream public resources including GEO, ClinicalTrials.gov, Reactome, GO, and cited literature.
-

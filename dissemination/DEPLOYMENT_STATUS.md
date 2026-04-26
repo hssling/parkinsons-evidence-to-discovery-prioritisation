@@ -17,6 +17,7 @@ Notes:
 - Uploaded with `huggingface_hub`.
 - Dataset card is in `README.md`.
 - This is a research dataset, not a trained model.
+- README updated after GitHub repository creation to include the version-controlled repository and CI validation link.
 
 ## Kaggle
 
@@ -31,6 +32,21 @@ Notes:
 - Initial Kaggle creation required title and subtitle shortening to satisfy Kaggle metadata limits.
 - A second version was uploaded with `--dir-mode zip`; Kaggle file listing now shows nested dataset assets including processed data, omics outputs, figures, scripts, manuscript files, and tables.
 - Kaggle rejected several custom tags as invalid; the dataset content and README still include the relevant biomedical keywords.
+- README and dataset metadata updated after GitHub repository creation to include the version-controlled repository and CI validation link.
+
+## GitHub Evidence Repository
+
+Status: created and pushed successfully.
+
+Repository:
+
+https://github.com/hssling/parkinsons-evidence-to-discovery-prioritisation
+
+Notes:
+
+- Includes evidence tables, omics outputs, figures, scripts, manuscript assets, NMJI submission files, reproducibility logs, README, citation metadata, licence, and GitHub Actions CI.
+- CI workflow: `.github/workflows/validate.yml`.
+- Validator: `scripts/12_validate_repository.py`.
 
 ## Clinical/Scientific Caution
 

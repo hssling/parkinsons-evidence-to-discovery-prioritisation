@@ -84,6 +84,14 @@ The highest-priority candidates in the current scoring framework were:
 
 GSE72267 limma analysis tested 22,277 probes across 40 PD and 19 control blood samples. No probes met the prespecified FDR < 0.05 and absolute log2 fold-change >= 0.25 threshold. GO and Reactome outputs are therefore exploratory and hypothesis-generating.
 
+## Repository and CI
+
+The GitHub repository with version-controlled evidence assets, scripts, manuscript files, reproducibility checks, and CI validation is available at:
+
+https://github.com/hssling/parkinsons-evidence-to-discovery-prioritisation
+
+The repository CI runs a lightweight validation script that checks required release assets, intervention-ranking integrity, cautionary clinical-claim language, and NMJI reference ordering.
+
 ## Intended Uses
 
 - Validate or modify the evidence scoring rubric.
@@ -114,4 +122,3 @@ Generated processed data, code, figures, and documentation are released under CC
 ## Citation
 
 Please cite this dataset and the upstream resources listed in `references_audit.csv`.
-
