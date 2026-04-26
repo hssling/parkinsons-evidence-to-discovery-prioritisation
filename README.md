@@ -69,6 +69,18 @@ Rscript scripts/05_differential_expression_meta_analysis.R
 Rscript scripts/06_pathway_enrichment.R
 ```
 
+## Roadmap
+
+The next seven project extensions are tracked in `ROADMAP.md`:
+
+1. systematic-review upgrade;
+2. multi-omics expansion;
+3. genetic causal triangulation;
+4. drug-discovery deepening;
+5. experimental-validation roadmap;
+6. India-specific prevention framework;
+7. living dashboard and automated updates.
+
 ## Public Mirrors
 
 - Hugging Face Datasets: https://huggingface.co/datasets/hssling/parkinsons-evidence-to-discovery-prioritisation
