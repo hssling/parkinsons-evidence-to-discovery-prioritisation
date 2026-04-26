@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it and the upstream sources listed in references_audit.csv."
+title: "Parkinson's Disease Evidence-to-Discovery Prioritisation"
+authors:
+  - family-names: "Siddalingaiah"
+    given-names: "H S"
+    orcid: "https://orcid.org/0000-0002-4771-8285"
+version: "1.0.0"
+date-released: "2026-04-26"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/hssling/parkinsons-evidence-to-discovery-prioritisation"
+keywords:
+  - Parkinson disease
+  - prevention
+  - evidence synthesis
+  - transcriptomics
+  - pathway enrichment
+  - drug repurposing
+  - public health

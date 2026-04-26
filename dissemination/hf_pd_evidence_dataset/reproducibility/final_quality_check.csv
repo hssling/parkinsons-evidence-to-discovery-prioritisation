@@ -1,0 +1,14 @@
+file,exists,bytes
+manuscript/manuscript_full.md,True,27199
+manuscript/manuscript_full.tex,True,28271
+manuscript/manuscript_full_publication_ready.docx,True,45730
+figures/graphical_abstract_pathway_to_intervention.png,True,426011
+figures/fig2_pathogenesis_evidence_network.png,True,916605
+figures/fig3_target_intervention_evidence_heatmap.png,True,241096
+figures/fig5b_reactome_enrichment_dotplot.png,True,66836
+figures/fig8_individual_prevention_measures.png,True,219321
+data/processed/pathway_intervention_framework.csv,True,3523
+data/processed/individual_prevention_measures.csv,True,555
+manuscript_word_count,True,3507
+citation_numbers_used,True,5
+unsupported_cure_language_count,True,0

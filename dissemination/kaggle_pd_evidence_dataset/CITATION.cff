@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Parkinson's Disease Evidence-to-Discovery Prioritisation Dataset"
+message: "If you use this dataset, please cite the dataset and the upstream public resources listed in references_audit.csv."
+type: dataset
+authors:
+  - family-names: "Study Team"
+    given-names: "PD AI Evidence-to-Discovery"
+abstract: "Processed evidence synthesis, clinical-trial, omics, pathway, network, and drug-repurposing assets for Parkinson's disease prevention and disease-modifying strategy prioritisation."
+license: "CC-BY-4.0"
+keywords:
+  - Parkinson disease
+  - evidence synthesis
+  - transcriptomics
+  - Reactome
+  - drug repurposing
+  - clinical trials
+  - public health
+date-released: "2026-04-24"
+

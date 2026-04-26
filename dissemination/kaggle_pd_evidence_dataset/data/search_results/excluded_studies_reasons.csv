@@ -1,0 +1,6 @@
+reason,count,notes
+duplicate records,312,Removed before title/abstract screening
+wrong population or non-PD,284,Excluded at title/abstract
+narrative-only unsupported therapeutic claim,118,Excluded unless background context
+wrong outcome or no prevention/progression relevance,210,Excluded at title/abstract/full text
+non-human mechanistic only without translational link,110,Excluded from priority scoring

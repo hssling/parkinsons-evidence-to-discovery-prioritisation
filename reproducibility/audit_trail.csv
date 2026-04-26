@@ -1,0 +1,7 @@
+timestamp,step,status,notes
+2026-04-24,project_generation,completed,"Generated manuscript, tables, figures, scripts, and reproducibility files."
+2026-04-24,R_path_check,informational,Rscript was not exposed as a bare PATH command in PowerShell.
+2026-04-24,R_runtime_check,completed,"R 4.5.3 located at C:\Program Files\R\R-4.5.3\bin\x64\Rscript.exe; Rtools45 located."
+2026-04-24,GSE72267_omics,completed,"Downloaded GSE72267, performed QC/PCA, limma PD-vs-control analysis, and clusterProfiler GO BP enrichment."
+2026-04-24,ReactomePA_install,completed,"Installed ReactomePA, reactome.db, graphite, and dir.expiry through BiocManager."
+2026-04-24,Reactome_enrichment,completed,"Exploratory Reactome enrichment run on top-ranked 500 GSE72267 genes; 964 ranked terms exported."

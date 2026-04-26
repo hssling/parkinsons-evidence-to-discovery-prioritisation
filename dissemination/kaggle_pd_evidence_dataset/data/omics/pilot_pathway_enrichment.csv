@@ -1,0 +1,8 @@
+pathway,gene_count,FDR,domain
+Oxidative phosphorylation,7,0.004,mitochondrial
+Mitochondrial translation,5,0.011,mitochondrial
+Lysosome/autophagy,6,0.018,lysosomal
+Antigen processing and presentation,5,0.02,immune
+Toll-like receptor signalling,4,0.032,immune
+Dopaminergic synapse,4,0.044,synaptic
+Insulin/GLP-1 metabolic signalling,3,0.089,metabolic

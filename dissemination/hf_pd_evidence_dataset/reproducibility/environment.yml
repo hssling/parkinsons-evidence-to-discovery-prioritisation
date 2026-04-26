@@ -1,0 +1,13 @@
+name: pd-ai-evidence
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - requests
+  - matplotlib
+  - seaborn
+  - networkx
+  - openpyxl
+  - python-docx

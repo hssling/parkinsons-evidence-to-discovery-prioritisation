@@ -1,0 +1,17 @@
+# Python and R generated files
+__pycache__/
+*.py[cod]
+.Rhistory
+.RData
+.Rproj.user/
+
+# Local build and editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Large regenerated archives
+*.zip
+
+# Keep source assets, tables, figures and submission documents tracked.

@@ -1,0 +1,12 @@
+"package","installed"
+"GEOquery",TRUE
+"limma",TRUE
+"sva",TRUE
+"metafor",TRUE
+"clusterProfiler",TRUE
+"ReactomePA",TRUE
+"reactome.db",TRUE
+"org.Hs.eg.db",TRUE
+"ggplot2",TRUE
+"pheatmap",TRUE
+"BiocManager",TRUE

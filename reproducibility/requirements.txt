@@ -1,0 +1,12 @@
+pandas
+numpy
+requests
+matplotlib
+seaborn
+networkx
+scikit-learn
+openpyxl
+python-docx
+biopython
+mygene
+gseapy

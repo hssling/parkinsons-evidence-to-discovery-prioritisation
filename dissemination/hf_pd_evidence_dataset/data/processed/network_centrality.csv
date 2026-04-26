@@ -1,0 +1,52 @@
+node,degree_centrality,kind
+Pesticide exposure reduction,0.06,intervention
+GLP-1 receptor agonists,0.06,intervention
+Mediterranean/MIND-style dietary pattern,0.06,intervention
+Mitochondrial modulators,0.04,intervention
+Structured aerobic/resistance exercise,0.04,intervention
+Air-pollution reduction,0.04,intervention
+mitochondrial quality control,0.04,pathway
+oxidative phosphorylation,0.04,pathway
+NDUFS3,0.02,gene
+alpha-synuclein biology,0.02,pathway
+LRRK2,0.02,gene
+kinase/lysosomal signalling,0.02,pathway
+GBA1,0.02,gene
+lysosome,0.02,pathway
+PINK1,0.02,gene
+PRKN,0.02,gene
+COX5B,0.02,gene
+Parkin,0.02,pathway
+HLA-DRA,0.02,gene
+immune activation,0.02,pathway
+TLR2,0.02,gene
+neuroinflammation,0.02,pathway
+LAMP2,0.02,gene
+autophagy/lysosome,0.02,pathway
+MAPT,0.02,gene
+microtubule/tau,0.02,pathway
+SLC6A3,0.02,gene
+SNCA,0.02,gene
+aggregated alpha-synuclein,0.02,pathway
+"oxidative phosphorylation, PINK1",0.02,pathway
+paraquat,0.02,pathway
+rotenone,0.02,pathway
+occupational exposures,0.02,pathway
+exercise neuroplasticity,0.02,pathway
+metabolic reserve,0.02,pathway
+lixisenatide,0.02,pathway
+exenatide,0.02,pathway
+semaglutide class,0.02,pathway
+metabolic,0.02,pathway
+vascular,0.02,pathway
+inflammatory pathways,0.02,pathway
+LRRK2 inhibition,0.02,intervention
+LRRK2 kinase pathway,0.02,pathway
+GBA/lysosomal modulation,0.02,intervention
+"GBA1, glucocerebrosidase, lysosome",0.02,pathway
+Head-injury prevention,0.02,intervention
+TBI and neuroinflammatory priming,0.02,pathway
+PM2.5,0.02,pathway
+"NO2, inflammation, oxidative stress",0.02,pathway
+Alpha-synuclein immunotherapy,0.02,intervention
+dopaminergic synapse,0.02,pathway

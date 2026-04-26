@@ -1,0 +1,9 @@
+NMJI package counts and audit
+Abstract words: 271
+Main text words (Introduction through Conclusions): 2329
+Main display items: 5 (1 table + 4 figures)
+Supplementary figures embedded: 9
+First unique reference order: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+Figure citation order: 1, 2, 3, 4
+Table citation order: 1
+DOCX citation superscript failures: 0

@@ -1,0 +1,4 @@
+NMJI formatted package audit
+DOCX citation superscript failures: 0
+Reference 11 title corrected: True
+Reference author style: first 6 authors followed by et al. where >6 authors

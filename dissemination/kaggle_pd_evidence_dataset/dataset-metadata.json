@@ -1,0 +1,20 @@
+{
+  "title": "PD Evidence-to-Discovery Dataset",
+  "id": "jkhospital/parkinsons-evidence-to-discovery-prioritisation",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "parkinsons-disease",
+    "bioinformatics",
+    "clinical-trials",
+    "drug-repurposing",
+    "transcriptomics",
+    "public-health",
+    "neuroscience"
+  ],
+  "subtitle": "Evidence, omics, pathways, trials and repurposing assets for PD",
+  "description": "This dataset contains processed outputs from an AI-assisted evidence-to-discovery project on Parkinson's disease prevention and disease-modifying strategy prioritisation. Assets include ranked candidate interventions, pathway-to-intervention mappings, individual prevention measures, ClinicalTrials.gov mining outputs, GSE72267 limma differential-expression outputs, GO and exploratory Reactome enrichment outputs, drug-repurposing candidate rankings, manuscript tables, publication-ready figures, scripts, reference audit files, and reproducibility logs. The dataset is for research, education, reproducibility, and hypothesis generation only. It does not identify a cure and does not recommend investigational or repurposed drugs for clinical use outside approved indications or clinical trials."
+}

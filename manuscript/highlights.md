@@ -1,0 +1,5 @@
+- Evidence-to-discovery framework links PD pathways to modifiable intervention points.
+- Pesticide-exposure reduction and structured exercise ranked highest for near-term prevention relevance.
+- GSE72267 limma analysis found no DEGs at FDR < 0.05 and |log2FC| >= 0.25, supporting cautious interpretation.
+- Exploratory Reactome analysis highlighted NTRK, MAPK, TLR2/MyD88, IL-17, NOD1/2, and interferon signalling.
+- Pharmacological candidates remain trial-stage or approved for other indications and should not be promoted as PD prevention.

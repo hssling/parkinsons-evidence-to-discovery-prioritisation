@@ -1,0 +1,13 @@
+gene,pilot_log2FC,pilot_FDR,pathway
+SNCA,0.55,0.018,alpha-synuclein biology
+LRRK2,0.42,0.041,kinase/lysosomal signalling
+GBA1,-0.48,0.033,lysosome
+PINK1,-0.52,0.021,mitochondrial quality control
+PRKN,-0.44,0.049,mitochondrial quality control
+NDUFS3,-0.63,0.006,oxidative phosphorylation
+COX5B,-0.51,0.014,oxidative phosphorylation
+HLA-DRA,0.71,0.004,immune activation
+TLR2,0.59,0.012,neuroinflammation
+LAMP2,-0.39,0.052,autophagy/lysosome
+MAPT,0.31,0.081,microtubule/tau
+SLC6A3,-0.57,0.027,dopaminergic synapse

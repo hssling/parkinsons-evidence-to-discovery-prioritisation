@@ -1,0 +1,11 @@
+intervention_or_target,primary_target_pathway,human_clinical_30,mechanistic_20,genetic_omics_15,safety_15,feasibility_10,prevention_public_health_10,classification,rationale,priority_score_0_100
+Pesticide exposure reduction,paraquat/rotenone/occupational exposures,22,17,10,15,9,10,High translational priority,Prevention-first policy candidate; intervention trials impractical but public-health logic strong.,83
+Structured aerobic/resistance exercise,exercise neuroplasticity/metabolic reserve,22,17,8,15,10,10,High translational priority,Strong feasibility and broad-health benefit; disease-modifying proof remains indirect.,82
+GLP-1 receptor agonists,lixisenatide/exenatide/semaglutide class,24,17,9,10,7,5,Promising but needs validation,Phase 2 signal with mixed class-level uncertainty; metabolic plausibility.,72
+Mediterranean/MIND-style dietary pattern,metabolic/vascular/inflammatory pathways,14,13,6,15,9,9,Promising but needs validation,Favorable safety and population feasibility; causal PD-specific evidence is less direct.,66
+LRRK2 inhibition,LRRK2 kinase pathway,16,19,14,8,5,2,Promising but needs validation,Genetically anchored and in active trials; genotype-specific relevance.,64
+GBA/lysosomal modulation,"GBA1, glucocerebrosidase, lysosome",14,19,14,8,5,2,Promising but needs validation,Strong genetic/lysosomal rationale; clinical efficacy not established.,62
+Head-injury prevention,TBI and neuroinflammatory priming,14,11,5,15,8,8,Promising but needs validation,Low-risk preventive strategy; magnitude for PD prevention uncertain.,61
+Air-pollution reduction,"PM2.5/NO2, inflammation, oxidative stress",12,12,5,15,7,9,Promising but needs validation,Public-health relevance high; PD-specific causal strength variable.,60
+Alpha-synuclein immunotherapy,aggregated alpha-synuclein,10,20,10,9,4,1,Biologically interesting but weak human evidence,Two major antibody trials did not meet primary endpoints; vaccines/next-generation approaches remain investigational.,54
+Mitochondrial modulators,"oxidative phosphorylation, PINK1/Parkin",8,18,12,8,4,2,Biologically interesting but weak human evidence,Mechanistically strong but prior antioxidant-style trials have been inconsistent.,52

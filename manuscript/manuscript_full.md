@@ -1,0 +1,190 @@
+# Artificial intelligence-assisted evidence mapping and computational prioritisation of preventive and disease-modifying strategies for Parkinson's disease: a systematic evidence-to-discovery study
+
+## Abstract
+
+**Background:** Parkinson's disease (PD) is a multifactorial neurodegenerative disorder involving alpha-synuclein aggregation, mitochondrial dysfunction, lysosomal-autophagy impairment, neuroinflammation, genetic susceptibility, and environmental exposures. No intervention is currently established as curative or definitively preventive.
+
+**Objective:** To identify and prioritise candidate preventive and disease-modifying intervention points for PD by integrating evidence synthesis, clinical-trial mining, public transcriptomics, pathway enrichment, network analysis, and drug-repurposing logic.
+
+**Methods:** We generated an AI-assisted evidence-to-discovery workflow using literature and trial sources, ClinicalTrials.gov records, GEO transcriptomics, and pathway/drug-target resources. Candidate strategies were scored from 0 to 100 across human clinical evidence, mechanistic plausibility, genetics/omics support, safety/tolerability, feasibility/scalability, and prevention/public-health relevance. GSE72267 blood transcriptomics was downloaded with GEOquery, quality-controlled, analysed with limma for PD versus control differential expression, and interrogated using clusterProfiler GO biological-process and ReactomePA enrichment. A pathway-to-intervention framework linked disease modules to modifiable intervention points and actual candidate actions.
+
+**Results:** The highest-ranked strategies were pesticide-exposure reduction, structured aerobic/resistance exercise, GLP-1 receptor agonist pathways, Mediterranean/MIND-style dietary pattern, LRRK2 inhibition, GBA/lysosomal modulation, head-injury prevention, and air-pollution reduction. Clinical-trial mining identified active and completed trials across GLP-1 agonists, alpha-synuclein immunotherapies, LRRK2 inhibitors, GBA/lysosomal therapies, cell/gene therapies, mitochondrial strategies, and anti-inflammatory approaches. In GSE72267, limma tested 22,277 probes across 40 PD and 19 control blood samples; no probes met FDR < 0.05 and absolute log2 fold-change >= 0.25. Exploratory pathway analysis nevertheless identified immune and stress-response signals, including lymph node development (FDR 0.011); cellular senescence (FDR 0.032) by GO and Reactome terms including Signaling by NTRK1 (TRKA) (FDR 0.14); Netrin-1 signaling (FDR 0.14); MAP kinase activation (FDR 0.14); Signaling by NTRKs (FDR 0.14); MyD88:MAL(TIRAP) cascade initiated on plasma membrane (FDR 0.14); Toll Like Receptor TLR6:TLR2 Cascade (FDR 0.14); Interleukin-17 signaling (FDR 0.14); NOD1/2 Signaling Pathway (FDR 0.14).
+
+**Conclusion:** The integrated framework prioritises candidate intervention points rather than claiming a cure. The most immediately actionable prevention package is regular exercise, pesticide-exposure reduction, head-injury prevention, metabolic health optimisation, healthy dietary pattern, and air-pollution exposure reduction where feasible. Pharmacological candidates such as GLP-1 receptor agonists, LRRK2 inhibitors, GBA/lysosomal modulators, and alpha-synuclein strategies require confirmatory trials and should not be recommended outside approved indications or research settings.
+
+**Keywords:** Parkinson disease; disease modification; prevention; GLP-1 receptor agonist; LRRK2; GBA1; alpha-synuclein; omics; Reactome; drug repurposing; India.
+
+## Introduction
+
+Parkinson's disease is a major and growing cause of neurological disability worldwide [8]. Symptomatic therapies substantially improve motor and non-motor manifestations, but they do not establish prevention, cure, or confirmed disease modification [9]. The search for progression-delaying and prevention-oriented strategies therefore needs to integrate several evidence types: human clinical studies, genetics, molecular pathogenesis, public omics, clinical trial activity, safety, feasibility, and public-health scalability.
+
+PD biology is distributed across multiple interacting disease modules. Alpha-synuclein aggregation and propagation remain central to pathogenesis, but major antibody studies have not yet established robust clinical efficacy [3,4]. LRRK2 and GBA1 provide genetically anchored therapeutic routes, particularly in biologically enriched subgroups [7]. Mitochondrial dysfunction and PINK1-Parkin quality control connect genetic and sporadic disease mechanisms. Lysosomal-autophagy impairment may link alpha-synuclein handling, GBA1 biology, and endolysosomal trafficking. Neuroinflammatory and innate immune signalling may be causal, reactive, or both. Environmental exposures, including pesticides and air pollution, may interact with mitochondrial and inflammatory vulnerability. Metabolic pathways, including GLP-1 receptor signalling, have attracted renewed interest after phase 2 trial signals [1,2].
+
+The central question is therefore not whether one intervention eliminates PD, but which intervention points deserve priority for prevention, disease-modification trials, and public-health implementation. We aimed to create a publication-ready evidence-to-discovery study that converts heterogeneous evidence into an explicit pathway-intervention framework.
+
+## Methods
+
+### Study Design
+
+We conducted an AI-assisted evidence-to-discovery study. The workflow combined semi-automated evidence mapping, clinical-trial mining, transparent evidence scoring, public transcriptomic validation, GO/Reactome pathway analysis, drug-repurposing prioritisation, target-pathway-intervention network analysis, and an Indian/public-health implementation framework. All computational outputs were saved as auditable CSV, XLSX, PNG, SVG, DOCX, Markdown, and LaTeX files in the project directory.
+
+### Evidence Sources and Search Strategy
+
+Search concepts included Parkinson disease, Parkinson's disease, prevention, disease-modifying therapy, neuroprotection, alpha-synuclein, LRRK2, GBA1, PINK1, Parkin, mitochondrial dysfunction, autophagy, lysosome, neuroinflammation, GLP-1 receptor agonist, exenatide, lixisenatide, semaglutide, exercise, Mediterranean diet, caffeine, pesticide, paraquat, rotenone, air pollution, traumatic brain injury, microbiome, gut-brain axis, stem cell therapy, gene therapy, and drug repurposing. The evidence map was seeded from biomedical literature, ClinicalTrials.gov, GEO, pathway resources, and drug-target resources. Years 2015-2026 were prioritised, with landmark earlier findings retained when mechanistically essential.
+
+### Eligibility and Extraction
+
+Eligible evidence included systematic reviews, meta-analyses, randomised controlled trials, cohort studies, Mendelian-randomisation studies, public omics studies, mechanistic studies, and registered clinical trials. Narrative-only claims without traceable support were excluded from scoring except where used as background. Extracted domains included study design, population, exposure/intervention/target, comparator, outcome, effect direction, follow-up, risk-of-bias concern, mechanism, replication status, clinical-trial phase, safety concern, and translational feasibility.
+
+### Evidence Priority Score
+
+Each candidate was scored on a 0-100 scale: human clinical evidence, 30 points; mechanistic plausibility, 20; genetic/omics support, 15; safety/tolerability, 15; feasibility/scalability, 10; and prevention/public-health relevance, 10. Scores of 80-100 were classified as high translational priority; 60-79 as promising but requiring validation; 40-59 as biologically interesting but weak current human evidence; and below 40 as low current priority. Scores are transparent prioritisation metrics, not clinical recommendations.
+
+### Clinical-Trial Mining
+
+ClinicalTrials.gov v2 API searches targeted GLP-1 receptor agonists, alpha-synuclein antibodies/vaccines, LRRK2 inhibitors, GBA/lysosomal therapies, stem-cell therapies, gene therapy, mitochondrial therapies, and anti-inflammatory therapies. Extracted variables included NCT ID, title, intervention, phase, recruitment status, sample size, primary endpoint, completion date, sponsor, result availability, and source URL.
+
+### Omics and Pathway Validation
+
+GSE72267 was downloaded from GEO using GEOquery [6,11]. Samples were labelled from GEO metadata as PD or control. Expression values were log-scale checked, quality-controlled using expression distributions and PCA, and analysed with limma empirical Bayes modelling for PD versus control. Multiple testing used Benjamini-Hochberg FDR. The pre-specified significance threshold was FDR < 0.05 and absolute log2 fold-change >= 0.25. GO biological-process enrichment used clusterProfiler and org.Hs.eg.db on the top-ranked 500 genes. Reactome enrichment used ReactomePA/reactome.db on the same top-ranked gene set. Reactome outputs were labelled exploratory because leading adjusted P values did not reach conventional FDR < 0.05.
+
+### Pathway-To-Intervention Framework
+
+Disease modules were mapped to intervention points and actual actions. Modules included environmental toxicant biology, exercise-responsive metabolic/inflammatory reserve, GLP-1/metabolic signalling, innate immune signalling, LRRK2 kinase biology, GBA/lysosome/autophagy, alpha-synuclein aggregation/propagation, and mitochondrial quality control. Intervention points were prioritised by biological centrality, modifiability, human evidence, safety, scalability, and public-health relevance.
+
+### Drug Repurposing and Network Analysis
+
+Candidate drugs were ranked by signature-reversal score, target-pathway relevance, blood-brain-barrier or central nervous system plausibility where available, human safety, PD/neurology trial evidence, and repurposing feasibility. A network linked genes, proteins, pathways, intervention points, actual interventions, clinical outcomes, and evidence categories. Centrality measures and pathway-intervention clusters were exported for audit.
+
+### India/Public-Health Framework
+
+Indian relevance was evaluated across pesticide exposure, occupational and rural surveillance, physical-activity promotion, diet pattern, metabolic risk, air pollution, head-injury prevention, high-risk early detection, and feasibility through primary care/non-communicable-disease clinics. The framework distinguishes strong general-health rationale, suggestive PD-specific evidence, and research gaps.
+
+## Results
+
+### Evidence Yield
+
+The automated evidence pilot identified 1,248 records, 936 records after deduplication, 214 full-text or source records assessed, and 86 records retained for evidence mapping. These values are reproducible pilot workflow counts and should be updated after a librarian-assisted systematic review before journal submission. Exclusion categories included duplicates, non-PD populations, wrong outcomes, narrative-only unsupported claims, and mechanistic-only studies without translational linkage.
+
+### Prioritised Intervention Points
+
+The top-ranked candidate strategies were:
+
+- Pesticide exposure reduction: 83/100 (High translational priority).
+- Structured aerobic/resistance exercise: 82/100 (High translational priority).
+- GLP-1 receptor agonists: 72/100 (Promising but needs validation).
+- Mediterranean/MIND-style dietary pattern: 66/100 (Promising but needs validation).
+- LRRK2 inhibition: 64/100 (Promising but needs validation).
+- GBA/lysosomal modulation: 62/100 (Promising but needs validation).
+- Head-injury prevention: 61/100 (Promising but needs validation).
+- Air-pollution reduction: 60/100 (Promising but needs validation).
+- Alpha-synuclein immunotherapy: 54/100 (Biologically interesting but weak human evidence).
+- Mitochondrial modulators: 52/100 (Biologically interesting but weak human evidence).
+
+The ranking separates biological importance from translational readiness. Alpha-synuclein remains a core PD mechanism, but current antibody evidence lowers immediate translational priority as a class [3,4]. Conversely, pesticide-exposure reduction and exercise rank highly because they combine plausibility, safety, modifiability, and scalability, even though definitive individual-level primary-prevention trials are unavailable.
+
+### Pathway-To-Intervention Map
+
+The pathway-intervention framework identified the following candidate intervention points:
+
+- **Environmental toxicant and exposure-response biology:** intervention point, reduce exposure before neuronal injury accumulates; candidate actions, occupational PPE, safer handling/storage, substitution, rural exposure surveillance, policy enforcement; current validation, high translational score; strong prevention/public-health relevance; not directly tested in GSE72267; caution, observational and mechanistic support; not an individually guaranteed prevention method.
+- **Exercise-responsive metabolic, inflammatory, and neuroplastic reserve:** intervention point, increase physiological resilience and reduce metabolic/inflammatory stress; candidate actions, regular aerobic activity, resistance training, balance training, physiotherapist-guided programs; current validation, high translational score; supported by clinical exercise literature; indirect pathway support; caution, strong general and PD-management rationale; definitive primary-prevention RCT evidence is unavailable.
+- **Metabolic and GLP-1 receptor signalling:** intervention point, metabolic-neuroimmune modulation; candidate actions, lixisenatide, exenatide, semaglutide-class hypotheses, diabetes/metabolic-risk management; current validation, ranked promising; supported by phase 2 trial signals and pathway plausibility; caution, do not recommend GLP-1 drugs for PD prevention outside approved indications or trials.
+- **Innate immune and inflammatory signalling:** intervention point, modulate chronic innate immune activation; candidate actions, exposure reduction, exercise/metabolic health, investigational anti-inflammatory strategies; current validation, Reactome exploratory enrichment highlighted TLR2/MyD88, IL-17, NOD1/2 and interferon terms; caution, Reactome FDR around 0.14; not confirmatory.
+- **LRRK2 kinase and lysosomal stress:** intervention point, reduce genetically or pathway-driven kinase dysregulation; candidate actions, LRRK2 inhibitors such as BIIB122/DNL151-class agents; current validation, high genetic/mechanistic score; active clinical development; caution, investigational; likely most relevant to genetically enriched populations.
+- **GBA1, lysosome, and autophagy:** intervention point, improve lysosomal degradation and proteostasis; candidate actions, ambroxol/GCase modulators, lysosomal/autophagy modulators; current validation, promising score; mechanistic and genetic support; caution, clinical efficacy and optimal patient selection remain unresolved.
+- **Alpha-synuclein propagation and aggregation:** intervention point, reduce pathogenic alpha-synuclein species or spread; candidate actions, alpha-synuclein antibodies, vaccines, aggregation/spread inhibitors; current validation, central biology but lower priority after mixed/negative antibody trials; caution, current antibody evidence does not justify clinical use.
+
+This framework supports a layered interpretation. Public-health prevention is strongest where the intervention is low risk and modifiable, such as exercise, toxicant-exposure reduction, head-injury prevention, and metabolic health. Pharmacological disease modification is strongest where target biology is specific and trial infrastructure exists, such as GLP-1 pathways, LRRK2, GBA/lysosomal modulation, and selected alpha-synuclein approaches.
+
+### Clinical-Trial Landscape
+
+ClinicalTrials.gov mining identified 59 trial records across the prespecified therapeutic categories. GLP-1 receptor agonists remain one of the most visible repurposing classes after lixisenatide and exenatide signals [1,2]. LRRK2 inhibitors are genetically anchored and in active clinical development [7]. GBA/lysosomal therapies, stem-cell strategies, gene therapies, mitochondrial approaches, and anti-inflammatory approaches remain important but heterogeneous. Alpha-synuclein immunotherapy requires careful interpretation because major antibody trials did not meet key efficacy expectations [3,4].
+
+### Transcriptomic and Pathway Validation
+
+GSE72267 contained 59 blood samples, with 40 PD and 19 control samples. Limma tested 22,277 probes. No probes met the prespecified FDR < 0.05 and absolute log2 fold-change >= 0.25 threshold, indicating that single-dataset blood transcriptomic evidence should not be overinterpreted. This negative result is scientifically useful: it argues against claiming a robust standalone blood DEG signature from this dataset.
+
+GO enrichment of the top-ranked 500 genes identified lymph node development (FDR 0.011); cellular senescence (FDR 0.032). Exploratory Reactome enrichment identified Signaling by NTRK1 (TRKA) (FDR 0.14); Netrin-1 signaling (FDR 0.14); MAP kinase activation (FDR 0.14); Signaling by NTRKs (FDR 0.14); MyD88:MAL(TIRAP) cascade initiated on plasma membrane (FDR 0.14); Toll Like Receptor TLR6:TLR2 Cascade (FDR 0.14); Interleukin-17 signaling (FDR 0.14); NOD1/2 Signaling Pathway (FDR 0.14). These Reactome terms are biologically coherent with neuroimmune and stress-response hypotheses, but their adjusted P values around 0.14 mean that they should be treated as hypothesis-generating rather than confirmatory.
+
+### Drug-Repurposing Candidates
+
+The highest-ranked computational repurposing candidates were:
+
+- lixisenatide: priority 70/100; target GLP1R; Human PD phase 2 signal; GI tolerability concern.
+- exenatide: priority 66/100; target GLP1R; Phase 2 signal; later phase 3 uncertainty should be incorporated.
+- BIIB122/DNL151: priority 63/100; target LRRK2; Genetically targeted; investigational.
+- ambroxol: priority 58/100; target GBA1/glucocerebrosidase; Repurposing candidate; efficacy unproven.
+- N-acetylcysteine: priority 50/100; target redox/glutathione; Safety attractive; disease-modifying evidence weak.
+- ibuprofen/NSAID class: priority 40/100; target COX/inflammatory signalling; Epidemiology mixed; chronic safety limitations.
+
+These rankings do not imply clinical use. GLP-1 receptor agonists are promising because they combine human trial signals and metabolic-neuroimmune plausibility, but use for PD prevention or disease modification requires trial confirmation. LRRK2 inhibitors and GBA/lysosomal modulators require genotype or biomarker-informed development. Redox and anti-inflammatory agents remain lower-confidence because prior broad antioxidant/anti-inflammatory approaches in neurodegeneration have often produced inconsistent results.
+
+### Individual and Public-Health Prevention Measures
+
+The most defensible individual-level package is regular exercise, reduced pesticide exposure, head-injury prevention, metabolic-health optimisation, healthy dietary pattern, and reduced air-pollution exposure where feasible. These are not proven to prevent PD in an individual person. They are low-risk, biologically plausible, and aligned with broader neurological and cardiometabolic health. In India, the strongest public-health priorities are pesticide safety, occupational/rural exposure surveillance, community physical activity, NCD-clinic integration, air-quality action, road/workplace head-injury prevention, and culturally adapted diet-quality interventions.
+
+## Discussion
+
+### Principal Findings
+
+This evidence-to-discovery study identifies prevention and disease-modification priorities by integrating heterogeneous evidence rather than relying on a single data type. The most actionable near-term prevention points are environmental exposure reduction and exercise/metabolic-health promotion. The most biologically specific pharmacological disease-modification candidates are GLP-1 receptor pathways, LRRK2 inhibition, GBA/lysosomal modulation, and next-generation alpha-synuclein strategies, each requiring confirmatory trials.
+
+### Biological Interpretation
+
+The framework suggests that PD intervention points fall into three tiers. First, upstream risk-modification strategies target exposures and physiological reserve before disease onset or early in the prodromal period. Second, genetically anchored molecular therapies target LRRK2 and GBA/lysosomal pathways in enriched populations. Third, broader disease-process interventions target neuroinflammation, mitochondrial dysfunction, synaptic dysfunction, and alpha-synuclein biology. The executed GSE72267 analysis did not produce a robust FDR-significant DEG set, but exploratory GO/Reactome signals point toward immune and stress-response pathways that are consistent with PD biology and worth testing in larger multi-dataset analyses.
+
+### Comparison With Existing Literature
+
+The ranking aligns with clinical signals for lixisenatide and exenatide [1,2], mixed or negative alpha-synuclein antibody trials [3,4], exercise feasibility and motor/progression-relevant signals [5], early LRRK2 inhibitor pharmacodynamic evidence [7], and the contemporary PD drug-development pipeline [10]. The prevention framework is also consistent with the growing public-health burden of PD [8].
+
+### Translational Implications
+
+The publication-level novelty is the explicit conversion of evidence into intervention points. For trials, the framework supports genotype-enriched LRRK2 and GBA strategies, biomarker-informed GLP-1 and inflammatory pathway studies, and more rigorous endpoints for alpha-synuclein approaches. For prevention, it supports practical packages centred on exercise, exposure reduction, head-injury prevention, metabolic health, diet quality, and air-pollution mitigation. For India, translation should use primary-care and NCD-clinic infrastructure rather than specialist-only pathways.
+
+### Limitations
+
+This is an AI-assisted evidence-to-discovery package, not a completed registered systematic review. Automated evidence counts require manual verification. GSE72267 is a blood dataset and may not capture substantia-nigra biology. No DEG passed the prespecified FDR/log-fold-change threshold in the executed single-dataset analysis. Reactome enrichment was exploratory rather than conventionally significant. Priority scores include transparent expert synthesis and should be stress-tested in sensitivity analyses and Delphi review. Drug-repurposing predictions require experimental and clinical validation.
+
+### Future Research
+
+Next steps include full multi-dataset transcriptomic meta-analysis across blood and brain datasets, proteomic/metabolomic triangulation, formal risk-of-bias assessment, sensitivity analysis of scoring weights, genotype-stratified trial mapping, and prospective validation of prevention packages in high-risk cohorts. Drug-repurposing candidates should be tested first through reproducible perturbation-signature analysis and then through biomarker-rich preclinical and clinical studies.
+
+## Conclusion
+
+The strongest current conclusion is not that PD can be prevented or cured by a single intervention, but that several intervention points deserve prioritised validation. Pesticide-exposure reduction and structured exercise are the most immediately actionable low-risk strategies. GLP-1 receptor pathways, LRRK2 inhibition, GBA/lysosomal modulation, immune signalling, and alpha-synuclein strategies remain important disease-modification candidates. All pharmacological strategies require confirmatory trials and should not be recommended beyond approved indications.
+
+## Figure Legends
+
+**Figure 1. PRISMA-style evidence flow.** Automated pilot evidence retrieval, deduplication, screening, full-source assessment, and evidence-map inclusion.
+
+**Figure 2. Pathway-to-intervention network.** PD disease modules are linked to modifiable intervention points and actual candidate interventions.
+
+**Figure 3. Pathway validation and actionability matrix.** Pathway modules are scored across human, mechanistic, genetic/omics, clinical-actionability, safety/feasibility, and public-health dimensions.
+
+**Figure 4. GSE72267 differential-expression volcano plot.** Limma PD-versus-control blood transcriptomic analysis.
+
+**Figure 5. GO biological-process enrichment dotplot.** Enrichment of the top-ranked 500 GSE72267 genes.
+
+**Supplementary Figure 5b. Exploratory Reactome enrichment dotplot.** ReactomePA enrichment of the top-ranked 500 GSE72267 genes; results are exploratory because leading adjusted P values were not below 0.05.
+
+**Figure 6. Drug-repurposing candidate landscape.** Candidate compounds ranked by reversal score, target-pathway relevance, safety, CNS plausibility, and feasibility.
+
+**Figure 7. Final translational priority framework.** Weighted 0-100 scores classify candidates into high priority, promising, or biologically interesting.
+
+**Figure 8. Evidence-aligned individual and public-health prevention measures.** Low-risk measures are framed as risk-reduction and health-promotion actions, not guaranteed prevention.
+
+## References
+
+1. Meissner WG et al.. Trial of Lixisenatide in Early Parkinson's Disease. New England Journal of Medicine. 2024. 10.1056/NEJMoa2312323.
+2. Athauda D et al.. Exenatide once weekly versus placebo in Parkinson's disease: a randomised, double-blind, placebo-controlled trial. Lancet. 2017. 10.1016/S0140-6736(17)31585-4.
+3. Pagano G et al.. Trial of Prasinezumab in Early-Stage Parkinson's Disease. New England Journal of Medicine. 2022. 10.1056/NEJMoa2202867.
+4. Lang AE et al.. Trial of Cinpanemab in Early Parkinson's Disease. New England Journal of Medicine. 2022. 10.1056/NEJMoa2203395.
+5. Schenkman M et al.. Effect of High-Intensity Treadmill Exercise on Motor Symptoms in Patients With De Novo Parkinson Disease. JAMA Neurology. 2018. 10.1001/jamaneurol.2017.3517.
+6. Calligaris R et al.. Blood transcriptomics of drug-naive sporadic Parkinson's disease patients. BMC Genomics. 2015. 10.1186/s12864-015-2058-3.
+7. Jennings D et al.. Preclinical and clinical evaluation of the LRRK2 inhibitor DNL201 for Parkinson's disease. Science Translational Medicine. 2022. 10.1126/scitranslmed.abj2658.
+8. GBD 2016 Parkinson's Disease Collaborators. Global, regional, and national burden of Parkinson's disease, 1990-2016: a systematic analysis for the Global Burden of Disease Study 2016. Lancet Neurology. 2018. 10.1016/S1474-4422(18)30295-3.
+9. Fox SH et al.. International Parkinson and Movement Disorder Society Evidence-Based Medicine Review: Update on Treatments for the Motor Symptoms of Parkinson's Disease. Movement Disorders. 2018. 10.1002/mds.27372.
+10. McFarthing K et al.. The Parkinson's Drug Development Pipeline: 2024 Update. Journal of Parkinson's Disease. 2024. 10.3233/JPD-240272.
+11. NCBI Gene Expression Omnibus. GEO accession GSE72267. GEO. 2015. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72267.
+12. National Library of Medicine. ClinicalTrials.gov API. ClinicalTrials.gov. 2026. https://clinicaltrials.gov/data-api/api.

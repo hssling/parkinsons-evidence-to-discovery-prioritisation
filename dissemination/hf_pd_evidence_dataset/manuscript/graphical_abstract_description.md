@@ -1,0 +1,1 @@
+Graphical abstract file: figures/graphical_abstract_pathway_to_intervention.png. It shows evidence sources feeding weighted scoring and executed GSE72267 omics validation, converging on prioritised intervention points and translation layers. The caution label is: prioritisation, not cure.

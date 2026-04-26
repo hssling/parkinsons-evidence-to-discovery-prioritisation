@@ -1,0 +1,5 @@
+dataset,tissue,contrast,platform,source,use_status
+GSE72267,Blood,Drug-naive sporadic PD vs controls,Affymetrix HG-U133A 2.0,GEO,"Executed locally with GEOquery QC, limma PD-vs-control differential expression, and clusterProfiler GO BP enrichment."
+GSE99039,Blood,PD vs controls,Multi-platform blood expression,GEO,Listed for independent validation; not reanalysed in this environment.
+GSE7621,Substantia nigra,PD vs control post-mortem,Microarray,GEO,Candidate substantia nigra dataset; requires phenotype curation.
+GSE20163,Substantia nigra,PD vs control post-mortem,Microarray,GEO,Candidate substantia nigra dataset; requires phenotype curation.

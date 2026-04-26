@@ -1,0 +1,7 @@
+candidate,target,pathway,signature_reversal_score,target_pathway_relevance_20,human_safety_10,BBB_or_CNS_plausibility_10,repurposing_priority_0_100,notes
+lixisenatide,GLP1R,metabolic/neuroinflammatory,-0.42,18,8,7,70,Human PD phase 2 signal; GI tolerability concern.
+exenatide,GLP1R,metabolic/neuroinflammatory,-0.35,17,8,7,66,Phase 2 signal; later phase 3 uncertainty should be incorporated.
+BIIB122/DNL151,LRRK2,lysosomal/kinase,-0.3,15,6,4,63,Genetically targeted; investigational.
+ambroxol,GBA1/glucocerebrosidase,lysosomal,-0.24,13,8,5,58,Repurposing candidate; efficacy unproven.
+N-acetylcysteine,redox/glutathione,oxidative stress,-0.18,8,10,6,50,Safety attractive; disease-modifying evidence weak.
+ibuprofen/NSAID class,COX/inflammatory signalling,inflammation,-0.12,7,5,4,40,Epidemiology mixed; chronic safety limitations.

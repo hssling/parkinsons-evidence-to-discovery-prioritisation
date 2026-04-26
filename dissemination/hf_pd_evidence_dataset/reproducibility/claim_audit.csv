@@ -1,0 +1,5 @@
+domain,status,notes
+Cure claim,pass,No unsupported cure language detected.
+Clinical recommendations,pass,Drug candidates framed as trial-stage or approved only for existing indications.
+Omics claims,pass,GSE72267 negative DEG result and exploratory Reactome FDR are explicitly reported.
+Prevention claims,pass,"Individual measures framed as risk-reduction/general-health actions, not guaranteed PD prevention."
